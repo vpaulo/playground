@@ -1,43 +1,71 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta
-            name="description"
-            content="Web developer, constantly learning and experiencing new things."
-        />
-        <meta name="theme-color" content="#FFFFFF" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Web developer, constantly learning and experiencing new things." />
+    <meta name="theme-color" content="#FFFFFF" />
 
-        <link rel="canonical" href="https://vpaulo.github.io/" />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/playground/favicons/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/playground/favicons/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/playground/favicons/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/playground/site.webmanifest" />
+    <link rel="canonical" href="https://vpaulo.github.io/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/playground/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/playground/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/playground/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="/playground/site.webmanifest" />
 
 
-        <title>Vitor Rodrigues - Playground</title>
-      <script type="module" crossorigin src="/playground/assets/index-BKl5Ovh1.js"></script>
-      <link rel="stylesheet" crossorigin href="/playground/assets/index-D-WDpKKl.css">
-    </head>
-    <body>
-      <div id="main">
-        <h1>Playground</h1>
-      </div>
-    </body>
+    <title>Vitor Rodrigues - Playground</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "@vp/common": "https://vpaulo.github.io/common/index.js",
+          "@vp/navigation": "https://vpaulo.github.io/navigation/index.js"
+        }
+      }
+    </script>
+    <script type="module" crossorigin src="/playground/assets/index-M6RyIbGG.js"></script>
+    <link rel="stylesheet" crossorigin href="/playground/assets/index-Dc023dnC.css">
+  </head>
+  <body>
+    <div id="main">
+      <main class="layout">
+        <section class="workspace">
+          <div class="section-heading">
+            <h2>Application Preview</h2>
+            <span>Host application</span>
+          </div>
+
+          <div class="application">
+            <!-- Independent micro-frontends -->
+
+            <vp-navigation></vp-navigation>
+
+            <div class="content">
+              <h2>Welcome to the playground</h2>
+
+              <p>This application is composed of independently developed micro-frontends.</p>
+
+            </div>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="panel">
+            <h3>Loaded Components</h3>
+
+            <div id="component-list"></div>
+          </section>
+
+          <section class="panel">
+            <h3>Event Monitor</h3>
+
+            <div id="event-log">
+              <p class="muted">Waiting for events...</p>
+            </div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+  </body>
 </html>
